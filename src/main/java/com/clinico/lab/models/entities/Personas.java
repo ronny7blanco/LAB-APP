@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Personas {
 
 	@Id
-	private Long id;
+	private Long idPersona;
 	private String nombre;
 	private String apellido;
 	private Date  fechaNacimiento;

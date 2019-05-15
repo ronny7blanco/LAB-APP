@@ -17,6 +17,7 @@ public class Usuarios {
 	private Long Id_Usuarios;
 	private String Nombre_de_Usuario;
 	private String Contraseña;
+	private String estado;
 	
 
 }
