@@ -14,9 +14,10 @@ import lombok.Setter;
 @Getter @Setter @NoArgsConstructor
 public class Usuarios {
 	@Id 
-	private Long Id_Usuarios;
-	private String Nombre_de_Usuario;
-	private String Contraseña;
-	
+	private Long idUsuario;
+	private String tipoEmpleado;
+	private String nombreUsuario;
+	private String contraseña;
+	private String estado;
 
 }
