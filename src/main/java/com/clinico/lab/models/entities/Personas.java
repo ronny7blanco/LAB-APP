@@ -22,7 +22,6 @@ public class Personas {
 	private Date  fechaNacimiento;
 	private String eMail;
 	private String telefonoCelular;
-	private String tipos;
 	private String estado;
 	private String roles;
 	

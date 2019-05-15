@@ -1,5 +1,7 @@
 package com.clinico.lab.models.entities;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,11 +11,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="Encabizado_Examen")
+@Table(name = "DETALLE_HISTORIAL")
 @Getter @Setter @NoArgsConstructor
-public class Encabezado_Examen {
+public class DetalleHistorial {
 
-@Id
-	private Long IdEncabezado_Examen;
-	private String descripcion;
+	
+	
 }
