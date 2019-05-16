@@ -23,13 +23,11 @@ import lombok.Setter;
 public class ExamenesRealizados {
 
 @Id
-@ManyToOne(fetch=FetchType.LAZY)
-@JoinColumn(name="idExamenRealizado", nullable=true, unique = true)
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-private ExamenesRealizados idExamenRealizado;
-	
+
+	private Long idExamenRealizado;
 	private Date fecha;
 	private String precio;
+	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="idPersona", nullable=true, unique = true)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
