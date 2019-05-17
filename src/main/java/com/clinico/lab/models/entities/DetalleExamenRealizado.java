@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="DETALLE EXAMEN REALIZADO")
+@Table(name="DETALLE_EXAMEN_REALIZADO")
 @Getter @Setter @NoArgsConstructor
 public class DetalleExamenRealizado {
 
