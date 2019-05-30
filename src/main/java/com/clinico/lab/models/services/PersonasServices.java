@@ -24,8 +24,8 @@ public class PersonasServices implements IPersonasService {
 	
 	@Override
 	@Transactional()
-	public Personas save(Personas persona) {
-		return personaDao.save(persona);
+	public Personas save(Personas personas) {
+		return personaDao.save(personas);
 	}
 	
 	@Override
