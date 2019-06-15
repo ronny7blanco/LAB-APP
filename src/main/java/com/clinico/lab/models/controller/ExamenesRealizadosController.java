@@ -63,10 +63,10 @@ public class ExamenesRealizadosController {
 		
 		Logger.info("Updating Project with id {}", id);
 		
-		Optional<ExamenesRealizados> projectExamenesRealizados = examenesRealizadosService.findBy(id);
+		Optional<ExamenesRealizados> projectExamenesRealizados = examenesRealizadosService.findById(id);
 		if (!projectExamenesRealizados.isPresent())
 			return ResponseEntity.notFound().build();
-		examanesRealizados.setIdCabeceraHistorial(id);
+		examanesRealizados.setIdExamenesRealizados(id);
 		examenesRealizadosService.save(examanesRealizados);
 		return ResponseEntity.noContent().build();
 	}	
