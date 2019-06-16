@@ -59,7 +59,7 @@ public class CabeceraHistorialController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Object> update(@PathVariable("id") long id, @RequestBody CabeceraHistorial cabeceraHistorial){
 		
-		Logger.info("Updating Project with id {}", id);
+		Logger.info("Updating CabeceraHistorial with id {}", id);
 		
 		Optional<CabeceraHistorial> projectDetalleHistorial = cabeceraHistorialService.findBy(id);
 		if (!projectDetalleHistorial.isPresent())
@@ -72,7 +72,7 @@ public class CabeceraHistorialController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable("id") long id) {
 		
-		Logger.info("Fetching & Deleting Project with id {}", id);
+		Logger.info("Fetching & Deleting CabeceraHistorial with id {}", id);
 		
 		cabeceraHistorialService.delete(id);
 	}

@@ -56,7 +56,7 @@ public class PersonasController {
 	@PutMapping("/{id}")
     public ResponseEntity<Object> update(@PathVariable("id") long id, @RequestBody Personas personas) {
         
-		logger.info("Updating Project with id {}", id);
+		logger.info("Updating Personas with id {}", id);
 		
 		Optional<Personas> projectOptional = personaService.findById(id);
 		if (!projectOptional.isPresent())
@@ -69,7 +69,7 @@ public class PersonasController {
 	@DeleteMapping("/{id}")
     public void delete(@PathVariable("id") long id) {
         
-		logger.info("Fetching & Deleting Project with id {}", id);
+		logger.info("Fetching & Deleting Personas with id {}", id);
         
 		personaService.delete(id);        
     }

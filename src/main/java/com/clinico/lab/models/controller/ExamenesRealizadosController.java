@@ -61,12 +61,12 @@ public class ExamenesRealizadosController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Object> update(@PathVariable("id") long id, @RequestBody ExamenesRealizados examanesRealizados){
 		
-		Logger.info("Updating Project with id {}", id);
+		Logger.info("Updating ExamenesRealizados with id {}", id);
 		
 		Optional<ExamenesRealizados> projectExamenesRealizados = examenesRealizadosService.findById(id);
 		if (!projectExamenesRealizados.isPresent())
 			return ResponseEntity.notFound().build();
-		examanesRealizados.setIdExamenesRealizados(id);
+		examanesRealizados.setIdExamenRealizado(id);
 		examenesRealizadosService.save(examanesRealizados);
 		return ResponseEntity.noContent().build();
 	}	
@@ -74,7 +74,7 @@ public class ExamenesRealizadosController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable("id") long id) {
 		
-		Logger.info("Fetching & Deleting Project with id {}", id);
+		Logger.info("Fetching & Deleting ExamenesRealizados with id {}", id);
 		
 		examenesRealizadosService.delete(id);
 	}

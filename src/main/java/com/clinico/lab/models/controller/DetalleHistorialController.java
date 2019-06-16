@@ -4,8 +4,6 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
-import javax.persistence.Id;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.clinico.lab.models.entities.DetalleHistorial;
-import com.clinico.lab.models.services.DetalleHistorialService;
 import com.clinico.lab.models.services.IDetalleHistorialService;
 import com.clinico.lab.models.utils.NotFoundException;
 
@@ -52,19 +49,19 @@ public class DetalleHistorialController {
 		
 		DetalleHistorial detalleHistorial = detalleHistorialService.save(newDetalleHistorial);
 		
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(detalleHistorial.getIdDetalleHistorial()).toUri();
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(detalleHistorial.getId()).toUri();
 		return ResponseEntity.created(location).build().ok().body(detalleHistorial);	
 	} 
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<Object> update(@PathVariable("id") long id, @RequestBody DetalleHistorial detalleHistorial){
 		
-		Logger.info("Updating Project with id {}", id);
+		Logger.info("Updating DetalleHistorial with id {}", id);
 		
 		Optional<DetalleHistorial> projectDetalleHistorial = detalleHistorialService.findById(id);
 		if (!projectDetalleHistorial.isPresent())
 			return ResponseEntity.notFound().build();
-		detalleHistorial.setIdDetalleHistorial(id);
+		detalleHistorial.setId(id);
 		detalleHistorialService.save(detalleHistorial);
 		return ResponseEntity.noContent().build();
 	}	
@@ -72,7 +69,7 @@ public class DetalleHistorialController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable("id") long id) {
 		
-		Logger.info("Fetching & Deleting Project with id {}", id);
+		Logger.info("Fetching & Deleting DetalleHistorial with id {}", id);
 		
 		detalleHistorialService.delete(id);
 	}
