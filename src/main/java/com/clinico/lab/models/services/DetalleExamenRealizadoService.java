@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.clinico.lab.models.dao.IDetalleExamenRealizadoDao;
 import com.clinico.lab.models.entities.DetalleExamenRealizado;
-
+@Service
 public class DetalleExamenRealizadoService implements IDetalleExamenRealizadoService {
 
 	@Autowired
