@@ -15,12 +15,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.clinico.lab.models.entities.Personas;
 import com.clinico.lab.models.services.IPersonasService;
 import com.clinico.lab.models.utils.NotFoundException;
 
+@RestController
+@RequestMapping("/lab/personas")
 public class PersonasController {
 	
 	public static final Logger logger = LoggerFactory.getLogger(PersonasController.class);
