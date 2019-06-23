@@ -23,6 +23,6 @@ public class Personas {
 	private String eMail;
 	private String telefonoCelular;
 	private String estado;
-	private String roles;
+	private String rol;
 	
 }
