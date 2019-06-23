@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.clinico.lab.models.entities.CabeceraHistorial;
-import com.clinico.lab.models.services.CabeceraHistorialService;
 import com.clinico.lab.models.services.ICabeceraHistorialService;
 import com.clinico.lab.models.utils.NotFoundException;
 
@@ -64,8 +63,8 @@ public class CabeceraHistorialController {
 		
 		Logger.info("Updating CabeceraHistorial with id {}", id);
 		
-		Optional<CabeceraHistorial> projectDetalleHistorial = cabeceraHistorialService.findBy(id);
-		if (!projectDetalleHistorial.isPresent())
+		Optional<CabeceraHistorial> projectOptional = cabeceraHistorialService.findBy(id);
+		if (!projectOptional.isPresent())
 			return ResponseEntity.notFound().build();
 		cabeceraHistorial.setIdCabeceraHistorial(id);
 		cabeceraHistorialService.save(cabeceraHistorial);

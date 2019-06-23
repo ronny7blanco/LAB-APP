@@ -7,7 +7,6 @@ import com.clinico.lab.models.entities.DetalleTipoExamen;
 
 public interface IDetalleTipoExamenService {
 
-
 		public List<DetalleTipoExamen> findAll();
 			
 			public DetalleTipoExamen save(DetalleTipoExamen detalleTipoExamen);
