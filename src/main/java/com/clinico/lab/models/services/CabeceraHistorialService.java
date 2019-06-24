@@ -29,7 +29,7 @@ public class CabeceraHistorialService implements ICabeceraHistorialService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public Optional<CabeceraHistorial> findBy(Long id) {
+	public Optional<CabeceraHistorial> findById(Long id) {
 		return cabeceraHistorialDao.findById(id);
 	}
 

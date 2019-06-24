@@ -1,11 +1,8 @@
 package com.clinico.lab.models.controller;
 
 import java.net.URI;
-
 import java.util.List;
 import java.util.Optional;
-
-import javax.persistence.Id;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.clinico.lab.models.entities.CabeceraHistorial;
 import com.clinico.lab.models.entities.ExamenesRealizados;
-import com.clinico.lab.models.services.ExamenesRealizadosService;
-import com.clinico.lab.models.services.ICabeceraHistorialService;
 import com.clinico.lab.models.services.IExamenesRealizadosService;
 import com.clinico.lab.models.utils.NotFoundException;
 
@@ -52,6 +46,7 @@ public class ExamenesRealizadosController {
 		return examenesRealizados.get();
 	}
 	
+	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody ExamenesRealizados newExamenesRealizados) {
 		Logger.info("Creating ExamenesRealizados : {}", newExamenesRealizados);

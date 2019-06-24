@@ -46,6 +46,7 @@ public class DetalleTipoExamenController {
 		return detalleTipoExamen.get();
 	}
 	
+	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody DetalleTipoExamen newDetalleTipoExamen) {
 		Logger.info("Creating DetalleTipoExamen : {}", newDetalleTipoExamen);

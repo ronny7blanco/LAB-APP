@@ -46,6 +46,7 @@ public class EncabezadoExamenController {
 		return encabezadoExamen.get();
 	}
 	
+	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody EncabezadoExamen newEncabezadoExamen) {
 		Logger.info("Creating CabeceraHistorial : {}", newEncabezadoExamen);

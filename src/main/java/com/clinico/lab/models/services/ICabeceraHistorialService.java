@@ -11,7 +11,7 @@ public interface ICabeceraHistorialService {
 	
 	public CabeceraHistorial save (CabeceraHistorial cabeceraHistorial);
 	
-	public Optional<CabeceraHistorial> findBy(Long id);
+	public Optional<CabeceraHistorial> findById(Long id);
 	
 	public void delete(Long id);
 

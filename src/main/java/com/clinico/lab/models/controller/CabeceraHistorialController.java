@@ -4,8 +4,6 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
-import javax.persistence.Id;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,12 +40,13 @@ public class CabeceraHistorialController {
 	public CabeceraHistorial getOne (@PathVariable ("id") long id) {
 		Logger.debug("Fetching CabeceraHistorial with id {}", id);
 
-		Optional<CabeceraHistorial> cabeceraHistorial = cabeceraHistorialService.findBy(id);
+		Optional<CabeceraHistorial> cabeceraHistorial = cabeceraHistorialService.findById(id);
 		if (!cabeceraHistorial.isPresent())
 			throw new NotFoundException("id-" + id);
 		return cabeceraHistorial.get();
 	}
 	
+	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody CabeceraHistorial newCabeceraHistorial) {
 		Logger.info("Creating CabeceraHistorial : {}", newCabeceraHistorial);
@@ -63,7 +62,7 @@ public class CabeceraHistorialController {
 		
 		Logger.info("Updating CabeceraHistorial with id {}", id);
 		
-		Optional<CabeceraHistorial> projectOptional = cabeceraHistorialService.findBy(id);
+		Optional<CabeceraHistorial> projectOptional = cabeceraHistorialService.findById(id);
 		if (!projectOptional.isPresent())
 			return ResponseEntity.notFound().build();
 		cabeceraHistorial.setIdCabeceraHistorial(id);
