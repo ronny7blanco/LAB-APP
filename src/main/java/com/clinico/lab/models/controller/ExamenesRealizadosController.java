@@ -46,7 +46,6 @@ public class ExamenesRealizadosController {
 		return examenesRealizados.get();
 	}
 	
-	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody ExamenesRealizados newExamenesRealizados) {
 		Logger.info("Creating ExamenesRealizados : {}", newExamenesRealizados);

@@ -46,7 +46,6 @@ public class DetalleHistorialController {
 		return detalleHistorial.get();
 	}
 	
-	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody DetalleHistorial newDetalleHistorial) {
 		Logger.info("Creating DetalleHistorial : {}", newDetalleHistorial);

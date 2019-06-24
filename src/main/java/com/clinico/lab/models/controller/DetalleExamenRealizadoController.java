@@ -46,7 +46,6 @@ public class DetalleExamenRealizadoController {
 		return detalleExamenRealizado.get();
 	}
 	
-	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody DetalleExamenRealizado newDetalleExamenRealizado) {
 		Logger.info("Creating CabeceraHistorial : {}", newDetalleExamenRealizado);

@@ -46,7 +46,6 @@ public class PersonasController {
 		return personas.get();
 	}
 	
-	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create(@RequestBody Personas newPersonas) {
 		logger.info("Creating Persona : {}", newPersonas);

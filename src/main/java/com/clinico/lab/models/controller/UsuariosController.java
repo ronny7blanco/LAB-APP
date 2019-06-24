@@ -46,7 +46,6 @@ public class UsuariosController {
 		return usuarios.get();
 	}
 	
-	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create(@RequestBody Usuarios newUsuarios) {
 		logger.info("Creating Usuario : {}", newUsuarios);

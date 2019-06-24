@@ -46,7 +46,6 @@ public class TipoExamenController {
 		return tipoexamen.get();
 	}
 	
-	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create(@RequestBody TipoExamen newTipoExamen) {
 		logger.info("Creating TipoExamen : {}", newTipoExamen);

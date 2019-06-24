@@ -46,7 +46,6 @@ public class CabeceraHistorialController {
 		return cabeceraHistorial.get();
 	}
 	
-	@SuppressWarnings("static-access")
 	@PostMapping("")
 	public ResponseEntity<Object> create (@RequestBody CabeceraHistorial newCabeceraHistorial) {
 		Logger.info("Creating CabeceraHistorial : {}", newCabeceraHistorial);
