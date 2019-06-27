@@ -3,10 +3,10 @@ insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, 
   values ('01','Ronny','Blanco','03/02/1991','ron123@gmail.com','7766-5443','inactivo','paciente');
   
 insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL )
-  values ('02','Wilber','Hernandez','05/05/1994','wil321@gmail.com','7665-5643','soltero','paciente');
+  values ('02','Wilber','Hernandez','05/05/1994','wil321@gmail.com','7665-5643','inactivo','paciente');
   
 insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL )
-  values ('03','Homero','Simpson','13/12/1996','homersimp48@yahoo.es','7666-6666','soltero','doctor');
+  values ('03','Homero','Simpson','13/12/1996','homersimp48@yahoo.es','7666-6666','activo','doctor');
   
 insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL)
   values ('04','Ervin','Romero','06/07/2000','erv456@gmail.com','7000-1122','soltero','paciente');
