@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name="PERSONAS")
 @Getter @Setter @NoArgsConstructor
 public class Personas {
-
+	
 	@Id
 	private Long idPersona;
 	private String nombre;
@@ -24,5 +24,6 @@ public class Personas {
 	private String telefonoCelular;
 	private String estado;
 	private String rol;
-	
+
 }
+
