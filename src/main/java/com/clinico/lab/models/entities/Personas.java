@@ -17,12 +17,14 @@ public class Personas {
 	
 	@Id
 	private Long idPersona;
+	private String dui;
 	private String nombre;
 	private String apellido;
+	private String genero;
 	private Date  fechaNacimiento;
 	private String eMail;
 	private String telefonoCelular;
-	private String estado;
+	private String referencia;
 	private String rol;
 
 }

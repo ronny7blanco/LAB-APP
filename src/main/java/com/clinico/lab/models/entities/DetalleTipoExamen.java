@@ -23,8 +23,14 @@ public class DetalleTipoExamen {
 	
 	private Long idDetalleTipoExamen;
 	private String campoExamen;
+	private String descripcion;
 	private Long requiereValorNormal;
 	private String valorNormal;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="idPersona", nullable=true, unique = true)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Personas idPersona;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="idTipoExamen", nullable=true, unique = true)

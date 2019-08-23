@@ -17,5 +17,5 @@ public class TipoExamen {
 	private Long idTipoExamen;
 	private String nombreExamen;
 	private String muestra;
-	private String Descripcion;
+	private String descripcion;
 }

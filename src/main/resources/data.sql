@@ -1,33 +1,19 @@
 -- PERSONAS
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL )
-  values ('01','Ronny','Blanco','03/02/1991','ron123@gmail.com','7766-5443','inactivo','paciente');
+insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
+  values ('01','02030405-0','Ronny', 'Blanco','M','03/02/1991','ron123@gmail.com','7766-5443','no','paciente');
+ 
+ insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
+  values ('02','02030135-2','Wilbert','Aguilar','M','03/05/1993','wilo13@gmail.com','7261-5393','no','paciente');
   
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL )
-  values ('02','Wilber','Hernandez','05/05/1994','wil321@gmail.com','7665-5643','inactivo','paciente');
+insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
+  values ('03','09283922-4','Homero','Simpson','M','13/12/1996','homersimp48@yahoo.es','7666-6666','no','doctor');
   
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL )
-  values ('03','Homero','Simpson','13/12/1996','homersimp48@yahoo.es','7666-6666','activo','doctor');
+insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
+  values ('04','02030135-7','Xenia','Ferrufino', 'F','06/07/2000','erv456@gmail.com','7000-1122','si','paciente');
   
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL)
-  values ('04','Ervin','Romero','06/07/2000','erv456@gmail.com','7000-1122','inactivo','paciente');
+insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
+  values ('05','04032011-3','Alex','Mendoza','M','02/05/1990','albo12@gmail.com','7343-2312','no','paciente');
   
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL)
-  values ('05','Alex','Bonilla','02/05/1990/','albo12@gmail.com','7343-2312','activo','paciente');
-  
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL)
-  values ('06','Napo','Guevara','16/06/1997','nagu@gmail.com','7980-9878','activo','paciente');
-  
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL )
-  values ('07','Nestor','Argueta','23/01/1995','near23@gmail.com','7565-6565','inactivo','paciente');
-  
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL)
-  values ('08','Josue','Ayala','12/11/1989','joay45@gmail.com','7555-6565','activo','paciente');
-  
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL)
-  values ('09','Kelly','Hernandez','28/04/1998','kelly28@gmail.com','7677-7778','activo','paciente');
-  
-insert into "RONNY"."PERSONAS" (ID_PERSONA, NOMBRE, APELLIDO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, ESTADO, ROL )
-  values ('10','Maria','Andrade','07/06/1997','maan12@gmail.com','7665-4321','inactivo','paciente');
   
 -- TIPOS DE EXAMENES
 
@@ -62,35 +48,21 @@ INSERT INTO "RONNY"."TIPOSEXAMENES" (ID_TIPO_EXAMEN, NOMBRE_EXAMEN, DESCRIPCION,
   VALUES ('10', 'Panel b�sico metab�lico' , 'glucosa', '--');
   
  --USUARIOS 
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('01', 'Administrador' , 'Napoleon Bonilla', '123456', 'activo');  
+  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
+  	VALUES ('01', 'napo' , '12345', 'Napoleon', 'Balladares', 'user');  
   
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('02', 'Comun' , 'Joel Garcia', '123456', 'activo');  
+  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
+ 	 VALUES ('02', 'joel', 'holamundo', 'Joel', 'Garcia', 'user');  
   
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('03', 'Comun' , 'Carlos Flores', '123456', 'activo');  
+  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
+ 	 VALUES ('03', 'carlos', '12345', 'Carlos', 'Flores', 'user');  
   
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('04', 'Comun' , 'Jeremias Luna', '123456', 'activo');  
+  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
+ 	 VALUES ('04', 'jeremias', '123456', 'Jeremias', 'Luna', 'user');  
   
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('05', 'Comun' , 'Edwin Ceren', '123456', 'activo');  
+  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
+ 	 VALUES ('05', 'admi', 'admin19', 'adminis', 'laboratorio', 'admin');  
   
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('06', 'Comun' , 'Beatriz Zuniga', '123456', 'activo');  
-  
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('07', 'Comun' , 'Ronny Blanco', '123456', 'activo');  
-  
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('08', 'Comun' , 'Nestor Ayala', '123456', 'activo');  
-  
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('09', 'Comun' , 'Joaquin Bolaños', '123456', 'activo');  
-  
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, TIPO_EMPLEADO, NOMBRE_USUARIO, CONTRASEÑA, ESTADO) 
-  VALUES ('10', 'Administrador' , 'Yissel Bonilla', '123456', 'activo'); 
   
   --ENCABEZADO EXAMEN
   
@@ -101,36 +73,8 @@ INSERT INTO "RONNY"."TIPOSEXAMENES" (ID_TIPO_EXAMEN, NOMBRE_EXAMEN, DESCRIPCION,
   VALUES ('02', 'Resultados de los examenes obtenidos' , '02');  
   
   
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('03', 'Resultados de los examenes obtenidos' , '03');  
-  
-  
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('04', 'Resultados de los examenes obtenidos' , '04');  
-  
-  
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('05', 'Resultados de los examenes obtenidos' , '05');  
-  
-  
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('06', 'Resultados de los examenes obtenidos' , '06');  
-  
-  
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('07', 'Resultados de los examenes obtenidos' , '07');  
-  
-  
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('08', 'Resultados de los examenes obtenidos' , '08');  
-  
-  
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('09', 'Resultados de los examenes obtenidos' , '09');  
-  
-  
-    INSERT INTO "RONNY"."ENCABEZADO_EXAMEN" (ID_ENCABEZADO_EXAMEN,  DESCRIPCION, ID_USUARIO) 
-  VALUES ('10', 'Resultados de los examenes obtenidos' , '10');  
-  
-  
+ -- DETALLE DE TIPO EXAMEN
+INSERT INTO "RONNY"."DETALLE_TIPO_EXAMEN" (ID_DETALLE_TIPO_EXAMEN, CAMPO_EXAMEN, DESCRIPCION, REQUIERE_VALOR_NORMAL, VALOR_NORMAL, ID_PERSONA, ID_TIPO_EXAMEN) 
+  VALUES ('01', 'Examen Fisico Quimico', 'Color: Amarillo Desidad: 1000 Glucosa: Negativo Aspecto: Ligeramente turbio', '1', '----', '03', '01');
+
   

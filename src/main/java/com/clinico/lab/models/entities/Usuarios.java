@@ -16,8 +16,9 @@ public class Usuarios {
 	
 	@Id 
 	private Long idUsuario;
-	private String tipoEmpleado;
-	private String nombreUsuario;
-	private String contraseña;
-	private String estado;
+	private String username;
+	private String password;
+	private String firstname;
+	private String lastname;
+	private String role;
 }
