@@ -1,18 +1,18 @@
 -- PERSONAS
 insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
-  values ('01','02030405-0','Ronny', 'Blanco','M','03/02/1991','ron123@gmail.com','7766-5443','no','paciente');
+  values ('01','02030405-0','Ronny', 'Blanco','M','03/02/1991','ron123@gmail.com','7766-5443','no','PA-03');
  
  insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
-  values ('02','02030135-2','Wilbert','Aguilar','M','03/05/1993','wilo13@gmail.com','7261-5393','no','paciente');
+  values ('02','02030135-2','Wilbert','Aguilar','M','03/05/1993','wilo13@gmail.com','7261-5393','no','PA-04');
   
 insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
-  values ('03','09283922-4','Homero','Simpson','M','13/12/1996','homersimp48@yahoo.es','7666-6666','no','doctor');
+  values ('03','09283922-4','Nestor Josue','Argueta','M','13/12/1996','homersimp48@yahoo.es','7666-6666','no','PA-05');
   
 insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
-  values ('04','02030135-7','Xenia','Ferrufino', 'F','06/07/2000','erv456@gmail.com','7000-1122','si','paciente');
+  values ('04','02030135-7','Joaquin','Villatoro', 'M','06/07/2000','erv456@gmail.com','7000-1122','no','DOC-01' );
   
 insert into "RONNY"."PERSONAS" (ID_PERSONA, DUI, NOMBRE, APELLIDO, GENERO, FECHA_NACIMIENTO, E_MAIL, TELEFONO_CELULAR, REFERENCIA, ROL )
-  values ('05','04032011-3','Alex','Mendoza','M','02/05/1990','albo12@gmail.com','7343-2312','no','paciente');
+  values ('05','04032011-3','Alexandra','Mendoza','F','02/05/1990','albo12@gmail.com','7343-2312','si','PA-06');
   
   
 -- TIPOS DE EXAMENES
@@ -49,19 +49,11 @@ INSERT INTO "RONNY"."TIPOSEXAMENES" (ID_TIPO_EXAMEN, NOMBRE_EXAMEN, DESCRIPCION,
   
  --USUARIOS 
   INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
-  	VALUES ('01', 'napo' , '12345', 'Napoleon', 'Balladares', 'user');  
+  	VALUES ('01', 'javainuse' , '123456', 'Napoleon', 'Balladares', 'user');  
   
   INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
- 	 VALUES ('02', 'joel', 'holamundo', 'Joel', 'Garcia', 'user');  
+ 	 VALUES ('02', 'admin', 'admin', 'Joel', 'Garcia', 'admin');  
   
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
- 	 VALUES ('03', 'carlos', '12345', 'Carlos', 'Flores', 'user');  
-  
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
- 	 VALUES ('04', 'jeremias', '123456', 'Jeremias', 'Luna', 'user');  
-  
-  INSERT INTO "RONNY"."USUARIOS" (ID_USUARIO, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, ROLE) 
- 	 VALUES ('05', 'admi', 'admin19', 'adminis', 'laboratorio', 'admin');  
   
   
   --ENCABEZADO EXAMEN

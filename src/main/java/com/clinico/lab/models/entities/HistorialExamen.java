@@ -1,6 +1,5 @@
 package com.clinico.lab.models.entities;
 
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -15,21 +14,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="DETALLE_EXAMEN_REALIZADO")
+@Table(name="HISTORIAL_EXAMEN")
 @Getter @Setter @NoArgsConstructor
-public class DetalleExamenRealizado {
-
+public class HistorialExamen {
+	
 	@Id
-	private Long idDetalleExamenRealizado;
+	private Long idHistorial;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="idExamenRealizado", nullable=true, unique = true)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private ExamenesRealizados idExamenRealizado;
-
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="idDetalleTipoExamen", nullable=true, unique = true)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	private DetalleTipoExamen idDetalleTipoExamen;
-
 }

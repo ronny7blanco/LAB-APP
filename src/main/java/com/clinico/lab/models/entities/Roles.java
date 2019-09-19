@@ -9,12 +9,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "TIPOSEXAMENES")
+@Table(name="ROLES")
 @Getter @Setter @NoArgsConstructor
-public class TipoExamen {
-
+public class Roles {
+	
 	@Id
-	private Long idTipoExamen;
-	private String nombreExamen;
-	private String descripcion;
+	private Long idRol;
+	private String nombre;
+	
 }

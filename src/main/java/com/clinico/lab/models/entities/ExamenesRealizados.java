@@ -29,20 +29,12 @@ public class ExamenesRealizados {
 	private String precio;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="idPersona", nullable=true, unique = true)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	private Personas idPersona;
-	
-	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="idTipoExamen", nullable=true, unique = true)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private TipoExamen idTipoExamen;
-	
+
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="idEncabezadoExamen", nullable=true, unique = true)
+	@JoinColumn(name="idPersona", nullable=true, unique = true)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	private EncabezadoExamen idEncabezadoExamen;
-	
-
-
+	private Personas idPersona;
 }

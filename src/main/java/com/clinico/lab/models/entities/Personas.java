@@ -3,8 +3,13 @@ package com.clinico.lab.models.entities;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,8 +29,16 @@ public class Personas {
 	private Date  fechaNacimiento;
 	private String eMail;
 	private String telefonoCelular;
-	private String referencia;
-	private String rol;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="idRol", nullable=true, unique = true)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Roles idRol;
+	
+	private String usuarioCreo;
+	private Date fechaCreo;
+	private String usuarioModi;
+	private Date fechaModi;
 
 }
 

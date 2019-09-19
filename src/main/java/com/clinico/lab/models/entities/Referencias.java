@@ -14,16 +14,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table (name="ENCABEZADO_EXAMEN")
+@Table(name="REFERENCIAS")
 @Getter @Setter @NoArgsConstructor
-public class EncabezadoExamen {
-
+public class Referencias {
 	@Id
-	private Long idEncabezadoExamen;
-	private String descripcion;
+	private Long idReferencia;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="idUsuario", nullable=true, unique = true)
+	@JoinColumn(name="idPersona", nullable=true, unique = true)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	private Usuarios idUsuario;
+	private Personas idPersona;
 }
